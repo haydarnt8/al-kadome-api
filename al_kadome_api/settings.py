@@ -176,9 +176,9 @@ from firebase_admin import credentials
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_FILE_STORAGE = 'django_firebase.storage.FirebaseStorage'
-FIREBASE_STORAGE_BUCKET = 'al-kadome-9f8ab.appspot.com'
+FIREBASE_STORAGE_BUCKET = 'al-kadome-storage.appspot.com'
 
-FIREBASE_CERT_DATA = os.path.join(BASE_DIR, 'al-kadome-9f8ab-firebase-adminsdk-q9ejp-1cae47a767.json')
+FIREBASE_CERT_DATA = os.path.join(BASE_DIR, 'al-kadome-storage-firebase-adminsdk-okghq-abcca6b729.json')
 cred = credentials.Certificate(FIREBASE_CERT_DATA)
 firebase_admin.initialize_app(cred, { 
     'storageBucket': FIREBASE_STORAGE_BUCKET

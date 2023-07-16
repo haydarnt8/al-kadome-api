@@ -14,7 +14,7 @@ categoryController = Router(tags=["Category"])
 @categoryController.get("/", response={200: list[getCategory],  404: str})
 def get_categories(request):
     try:
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by('priority')
         if not categories:
             return 404, "Category not found"
     except Exception as e:
